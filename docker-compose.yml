@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  mynotebook:
+    container_name: mynotebook
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+
+    command: python3 -m jupyterlab
